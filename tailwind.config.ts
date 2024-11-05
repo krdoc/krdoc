@@ -11,7 +11,7 @@ export default <Partial<Config>>{
   theme: {
     fontFamily: {
       sans: ["Interop", ...defaultTheme.fontFamily.sans],
-      // serif: ["Nanum Myeongjo", ...defaultTheme.fontFamily.serif],
+      serif: ["Nanum Myeongjo", ...defaultTheme.fontFamily.serif],
     },
   },
 };
