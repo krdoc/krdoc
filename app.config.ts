@@ -15,7 +15,7 @@ export default defineAppConfig({
     },
 
     button: {
-      base: "focus:outline-none focus-visible:outline-0 disabled:cursor-not-allowed disabled:opacity-75 flex-shrink-0 font-medium rounded-md text-sm inline-flex items-center justify-center transition-colors",
+      base: "focus:outline-none focus-visible:outline-0 disabled:cursor-not-allowed disabled:opacity-75 flex-shrink-0 font-medium text-sm inline-flex items-center justify-center transition-colors",
       size: {
         "2xs": "text-xs px-2 py-1",
         xs: "text-xs px-2.5 py-1.5",

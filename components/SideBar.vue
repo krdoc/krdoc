@@ -34,11 +34,18 @@
       <span class="font-bold"> 텍스트 서식 </span>
       ({{ KSS.name }})
     </p>
-    <div class="px-2">
+    <div class="px-4">
+      <UButtonGroup size="sm" orientation="horizontal" class="mb-2">
+        <UButton icon="i-ph-text-b" color="white" variant="solid" />
+        <UButton icon="i-ph-text-italic" color="white" variant="solid" />
+        <UButton icon="i-ph-text-underline" color="white" variant="solid" />
+        <UButton icon="i-ph-text-strikethrough" color="white" variant="solid" />
+      </UButtonGroup>
+
       <UAccordion
         default-open
         color="white"
-        variant="ghost"
+        variant="outline"
         size="sm"
         multiple
         :items="KSS.format"
@@ -51,7 +58,7 @@
             <button
               v-for="style in item.styles"
               :key="style.id"
-              class="flex items-center space-x-2 hover:bg-gray-100 dark:hover:bg-gray-800 p-2 pl-4 rounded-md w-full"
+              class="flex items-center space-x-2 hover:bg-gray-100 dark:hover:bg-gray-800 px-2 py-1 rounded-md w-full"
               variant="link"
               color="gray"
               :style="item.localStyle"
@@ -88,6 +95,12 @@ const KSS = reactive({
           label: "제목 1",
           icon: "i-ph-text-h-one",
           style: "font-size: 2em; line-height: 1.2;",
+          editable: {
+            b: false,
+            i: false,
+            u: false,
+            s: false,
+          },
         },
         {
           id: "h2",
@@ -119,4 +132,6 @@ const KSS = reactive({
     },
   ],
 });
+
+const selectedStyle = ref("header");
 </script>
